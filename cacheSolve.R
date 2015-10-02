@@ -14,9 +14,8 @@ cacheSolve <- function(x, ...) {
 	}
 	## get matrix object
 	data <- x$get()
-	## check if matrix is invertible and if not provide
-	## message. 
-	## Inverse matrix
+	## check if matrix is invertible and if not provide message
+        ## Inverse matrix
 	if (class(try(solve(data, ...),silent=T))=="matrix") {
 	        m <- solve(data, ...)
 	        x$setinverse(m)
